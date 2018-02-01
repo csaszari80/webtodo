@@ -9,6 +9,13 @@
     - A böngészőkben meg lehet nézni az oldal forrását
     - Böngészők fejlesztő eszköztárában meg lehet tekinteni ahálózati forgalmat is:
       - módja alegtöbb böngészőben: F12 (Networkfül, majd Oldalfrissítés)
-- MVC alkalmazás fejlesztés
+- MVC(Model-View-Controller) alkalmazás fejlesztés 
+  - a fejlesztő környezet három fontos szereplőt különböztet meg:
+    - vezérlő (Controller): Minden kérés hozzá érkezik a feladata a kérés kiszolgálása vagy a kiszolgáláshoz szükséges feladatok delegálása, a feladatok elvégzésével a végeredmény továbbítása a kérő felé.
+    - adatok (Model): adatok köre, létrehozása, kiszámolása, előállítása, transzformációja a kész adatok szolgáltatása a másik két szereplőnek
+    - Megjelenítés (View): feladata a kinézethez szükséges elemek meghatározása, előáállítása módosítása (jelen esetben html a forma)
+  - ASP.Net MVC: névkonvenció alapú a könyvtárak és állományok nevei egy előre meghatározott konvenciót követnek, a működésük ebből következik
+    - Controler létrehozása (Contorllers Mappa létrehozása | Add Controller | Index Controller)
+    - Nézet létrehozása (adatokat most még nem használunk) (View mappában lévő index (ez a contorller neve) mappában hozzuk létre index.cshtml néven)
 - Egy megjelenítő oldal készítése
 - Specifikáció

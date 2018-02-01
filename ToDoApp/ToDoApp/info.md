@@ -4,6 +4,11 @@
 - webes fejlesztés fogalma
   - ajánlott tanfolyam: lenyűgöző weblapk készítése
   - Minimum weblap testHTML.html
+  - http protokoll (wikipédia) 
+    - Négy eszköz: kérés, tartalom, fejléc, végállapot
+    - A böngészőkben meg lehet nézni az oldal forrását
+    - Böngészők fejlesztő eszköztárában meg lehet tekinteni ahálózati forgalmat is:
+      - módja alegtöbb böngészőben: F12 (Networkfül, majd Oldalfrissítés)
 - MVC alkalmazás fejlesztés
 - Egy megjelenítő oldal készítése
 - Specifikáció

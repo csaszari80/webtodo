@@ -2,6 +2,8 @@
 - Markdown állományok fogalma 
   - [Dokumentáció](https://guides.github.com/features/mastering-markdown/)
 - webes fejlesztés fogalma
+  - ajánlott tanfolyam: lenyűgöző weblapk készítése
+  - Minimum weblap testHTML.html
 - MVC alkalmazás fejlesztés
 - Egy megjelenítő oldal készítése
 - Specifikáció

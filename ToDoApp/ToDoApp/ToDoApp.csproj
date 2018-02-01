@@ -76,6 +76,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="info.md" />
+    <Content Include="testHTML.html" />
     <Content Include="Web.config" />
     <Content Include="spec.md" />
   </ItemGroup>

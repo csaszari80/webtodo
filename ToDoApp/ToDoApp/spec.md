@@ -10,6 +10,8 @@
 - online frissítés
 
 ## Szereplők
-
+- Apa
+- Anya
+- Gyerek
 
 ## Forgatókönyvek

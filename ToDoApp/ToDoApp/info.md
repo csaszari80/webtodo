@@ -19,3 +19,7 @@
     - Nézet létrehozása (adatokat most még nem használunk) (View mappában lévő index (ez a contorller neve) mappában hozzuk létre index.cshtml néven)
 - Egy megjelenítő oldal készítése
 - Specifikáció
+- A Model bevezetése
+  - szükségünk van egy felsorolásra amit a programunk valahol előállít
+  - az adatokat át kell adni a nézetnek
+  - az adatokat a nézet megfelelő helyén megjelenítjük

@@ -27,3 +27,5 @@
 ### IIS
 - ha élesben akarjuk használni akkor kell egy szerver amin fut
 - fejlesztéshez a Visual Studio automatikusan telepíti a Visual Studio Express-t
+
+4.video 36 perc

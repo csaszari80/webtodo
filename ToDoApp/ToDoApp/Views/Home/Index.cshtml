@@ -1,0 +1,27 @@
+﻿
+@{
+    Layout = null;
+    /// kiolvassuk a kontrollertől kapott adatokat mivel az átadás során elveszhet a típusinformáció ezért a bal oldalon meg kell adni, hogy milyen típusú információt várunk (nem használunk var-t)
+    /// a jobb oldalon pedig castolni kell az adatot ugyanerre a típusra
+    List<string> bevasarlolista = (List < string >) ViewData["bevasarlolista"];
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div> 
+        <ul>
+            @*Lista bejárása foreach ciklussal*@
+            @foreach (var elem in bevasarlolista)
+            {
+                <li>@elem</li>
+            }
+        </ul>
+    </div>
+</body>
+</html>

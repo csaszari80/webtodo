@@ -15,11 +15,15 @@
     - adatok (Model): adatok köre, létrehozása, kiszámolása, előállítása, transzformációja a kész adatok szolgáltatása a másik két szereplőnek
     - Megjelenítés (View): feladata a kinézethez szükséges elemek meghatározása, előáállítása módosítása (jelen esetben html a forma)
   - ASP.Net MVC: névkonvenció alapú a könyvtárak és állományok nevei egy előre meghatározott konvenciót követnek, a működésük ebből következik
-    - Controler létrehozása (Contorllers Mappa létrehozása | Add Controller | Index Controller)
-    - Nézet létrehozása (adatokat most még nem használunk) (View mappában lévő index (ez a contorller neve) mappában hozzuk létre index.cshtml néven)
+    - Controler létrehozása (Contorllers Mappa létrehozása | Add Controller | HomeController)
+    - Nézet létrehozása (adatokat most még nem használunk) (View mappában lévő home (ez a contorller neve) mappában hozzuk létre index.cshtml néven)
 - Egy megjelenítő oldal készítése
 - Specifikáció
 - A Model bevezetése
   - szükségünk van egy felsorolásra amit a programunk valahol előállít
   - az adatokat át kell adni a nézetnek
   - az adatokat a nézet megfelelő helyén megjelenítjük
+ ## Alkalmazás futtatása
+### IIS
+- ha élesben akarjuk használni akkor kell egy szerver amin fut
+- fejlesztéshez a Visual Studio automatikusan telepíti a Visual Studio Express-t

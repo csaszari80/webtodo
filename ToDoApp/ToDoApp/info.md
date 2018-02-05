@@ -9,7 +9,11 @@
     ```
 
 - webes fejlesztés fogalma
-  - ajánlott tanfolyam: lenyűgöző weblapk készítése
+  - ajánlott tanfolyamok: 
+    - lenyűgöző weblapok készítése
+    - asp.net core
+    - étterem projekt
+    - snake projekt
   - Minimum weblap testHTML.html
   - http protokoll (wikipédia) 
     - Négy eszköz: kérés, tartalom, fejléc, végállapot

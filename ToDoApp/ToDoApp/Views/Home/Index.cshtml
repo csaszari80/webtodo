@@ -3,7 +3,7 @@
     @model-el kell kezdeni és csak egy darab paramétert(ezért nem kell neki név sem) lehet neki adni ennek a típusát kell megadni. Ezzel mondjuk meg milyen típusú adatot várunk az Action-tól
     Ezután lesz egy List<string> típusú Model nevű változőnk
     *@
-@model List<string>
+@model List<ToDoApp.Contollers.Feladat>
 @{
     Layout = null;
 
@@ -22,7 +22,14 @@
             @*Lista bejárása foreach ciklussal  Ha a modelt használjul*@
             @foreach (var elem in Model)
             {
-                <li>@elem</li>
+                if (elem.Elvegezve)
+                {
+                    <li><strike>@elem.Megnevezes</strike></li>
+                }
+                else
+                {
+                    <li>@elem.Megnevezes</li>
+                }
             }
         </ul>
     </div>

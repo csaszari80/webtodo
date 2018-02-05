@@ -1,9 +1,12 @@
 ﻿
+@*Ha modelt akarunk átvenni
+    @model-el kell kezdeni és csak egy darab paramétert(ezért nem kell neki név sem) lehet neki adni ennek a típusát kell megadni. Ezzel mondjuk meg milyen típusú adatot várunk az Action-tól
+    Ezután lesz egy List<string> típusú Model nevű változőnk
+    *@
+@model List<string>
 @{
     Layout = null;
-    /// kiolvassuk a kontrollertől kapott adatokat mivel az átadás során elveszhet a típusinformáció ezért a bal oldalon meg kell adni, hogy milyen típusú információt várunk (nem használunk var-t)
-    /// a jobb oldalon pedig castolni kell az adatot ugyanerre a típusra
-    List<string> bevasarlolista = (List < string >) ViewData["bevasarlolista"];
+
 }
 
 <!DOCTYPE html>
@@ -16,8 +19,8 @@
 <body>
     <div> 
         <ul>
-            @*Lista bejárása foreach ciklussal*@
-            @foreach (var elem in bevasarlolista)
+            @*Lista bejárása foreach ciklussal  Ha a modelt használjul*@
+            @foreach (var elem in Model)
             {
                 <li>@elem</li>
             }

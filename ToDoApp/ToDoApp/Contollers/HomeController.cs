@@ -11,7 +11,7 @@ namespace ToDoApp.Contollers
     {
         // GET: Index
         //Ez ez pedig a view-t hívja
-        //A teljes cím: http://locsalhost:port/Index/index ebbőlaz Index az IndexControllert jelenti a index pedig ezt a függvényt hívja ami megjeleníti a viewt ha nincs máés függvény akkor a standard szerint ez lesz meghívva
+        //A teljes cím: http://locsalhost:port/Home/index ebbőlaz Home az HomeControllert jelenti a index pedig ezt a függvényt hívja ami megjeleníti a viewt ha nincs máés függvény akkor a standard szerint ez lesz meghívva
         public ActionResult Index()
         {
             var bevasarlolista = new List<string>();
@@ -20,9 +20,9 @@ namespace ToDoApp.Contollers
             bevasarlolista.Add("Olaj");
             bevasarlolista.Add("Marhahusika");
 
-            // a nézeten lévő adatok speciális elnevezésű asszociatív tömmbben melynek egyenlőre csak egy bevásárlólista nevű eleme lesz ami a bevásárlólistát tartalmazza
-            ViewData["bevasarlolista"] = bevasarlolista;
-            return View();
+            
+            //Az előállított adatokat (a modelt) átadjuk a nézetnek
+            return View(bevasarlolista);
         }
     }
 }

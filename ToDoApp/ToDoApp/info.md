@@ -1,6 +1,13 @@
 ﻿# Webes TODO alkalmazás készítése
 - Markdown állományok fogalma 
   - [Dokumentáció](https://guides.github.com/features/mastering-markdown/)
+  - #;##;### a különböző szintű címek megjelenítése
+  - -a felsorolásjelejókhez
+  - [szöveg](link) a linkekhez
+  - ``` 
+    A beírt szövegek feldolgozás nélküli megjelenítéséhez(pl ascii ábrák)
+    ```
+
 - webes fejlesztés fogalma
   - ajánlott tanfolyam: lenyűgöző weblapk készítése
   - Minimum weblap testHTML.html

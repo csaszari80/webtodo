@@ -56,5 +56,18 @@
       - az action függvény paraméterén keresztül vesszük át form paramétert (model binding)
   - Meg kell oldani, hogy a bevitt adatok megőrződjenek a szerveren
 
+## Alkalmazás váza:
+- A lista oldalon a következő lehetőségek vannak
+- Új elem felvitele
+- Meglévő elem törlése
+- Meglévő elem elvégzésének jelzése
+- Az egyes lehetőségek linkek segítségével elérhetők, ha egy linkre kattintunk akkor az adott feladattal kapcsolatos oldalra kerülünk.
+Az általános adatbeviteli megoldás ASP.NET MVC alkalmazásoknál: Két Action és hozáájuk 1 db view
+- Az adatbevitelhez szükséges képernyőt egy Action szolgáltatja ami a get kérésekre reagál
+- Az adat feldolgozást egy ugyanolyan nevű de csak post kérésekre reagáló action kezeli
+## Adatok perzisztens tárolása
 
 
+
+
+3.alkalom 2. video befejezve

@@ -19,10 +19,7 @@ namespace ToDoApp.Contollers
             bevasarlolista.Add(new Feladat { Megnevezes = "Pirospaprika", Elvegezve = true });
             bevasarlolista.Add(new Feladat { Megnevezes = "Olaj", Elvegezve = false });
             bevasarlolista.Add(new Feladat { Megnevezes = "Marhahusika", Elvegezve = false });
-            if (Request.QueryString.AllKeys.Contains("Megnevezes"))
-            {
-                bevasarlolista.Add(new Feladat { Megnevezes = Request.QueryString["Megnevezes"], Elvegezve = false });
-            }
+           
             
 
             //Az előállított adatokat (a modelt) átadjuk a nézetnek
@@ -30,14 +27,36 @@ namespace ToDoApp.Contollers
         }
         
         /// <summary>
-        /// Ez a függvény fogja kezelni az Add actiont a paraméterként megadott változókat automatikusan keresni fogja querystringben(get) és a form data-ban(post) is.
+        /// Ez a függvény fogja kezelni az Add action-t.
+        /// Ezt get kérés fogja keresni (A főoldalon lévő link)
         /// Ahhoz hogy ne dobjon fel hibát hozzá kell adni egy Add nevű viewt
         /// </summary>
         /// <returns></returns>
+        [HttpGet] //így most már csak get kérésre reagál (annotáltuk)
+        public ActionResult Add()
+        {
+            //todo: perzisztens adattárolás
+
+            // model létrehozása és kiküldése a felületre
+            var model = new Feladat();
+            return View(model);
+        }
+        /// <summary>
+        /// Ez a függvényváltozat fogja kezelni az Add actiont akkor ha az űrlapról van meghivatkozva,
+        /// a paraméterként megadott változókat automatikusan keresni fogja querystringben(get) és a form data-ban(post) is.
+        /// - Ellenőrzi és rögzíti a felhasználó által bevitt adatokat.
+        /// - Ezután átirányít az Indexre
+        /// </summary>
+        /// <param name="Megnevezes"></param>
+        /// <returns></returns>
+        [HttpPost] // ez csak post kérésekre reagál
         public ActionResult Add(string megnevezes)
         {
+            //todo: perzisztens adattárolás
+
+            // új elem felvitele
             
-            return View();
+            return RedirectToAction("Index");
         }
     }
 }

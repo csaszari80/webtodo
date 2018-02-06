@@ -32,10 +32,15 @@
                 }
             }
         </ul>
-        <form action="/Home/Add" method="post">
-            <input type="text" name="Megnevezes" value="" />
-            <button>Felvitel</button>
-        </form>
-    </div>
-</body>
-</html>
+        @*A razor kódban a html és az url helper teszi lehetővé, hogy ne tiszta html kódot kelljen írnunk, hanem a kapott model köré tudjuk szervezni a cshtml kódot*@
+        @*Html-ben a hivatkozás így nézne ki
+        <a href="http://google.com">Ez egy link</a>*@
+
+        @*A külső hivatkozásokhoz ez is jó azonban ha az alkalmazás egyik action-jét  akarjuk meghívni,
+             akkor nem érdemes  megkerülni az útválasztást ezért Razorban a helper-t használjuk inkább*@
+        @*Mivel az Index (az ehhez a view-hoz tartozó) action és a hívni kívánt Add action ugyanabban a Contorolleren (Home) van ezért annak megadása nem szükséges
+        @Html.ActionLink("Új elem felvitele","Add","Home")*@
+        @Html.ActionLink("Új elem felvitele", "Add")
+        </div>
+    </body>
+    </html>

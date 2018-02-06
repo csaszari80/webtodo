@@ -114,3 +114,4 @@ C:\Users\csaszariz\Source\Repos\webtodo\ToDoApp\ToDoApp\bin1\System.Web.Razor.xm
 C:\Users\csaszariz\Source\Repos\webtodo\ToDoApp\ToDoApp\bin1\System.Web.WebPages.xml
 C:\Users\csaszariz\Source\Repos\webtodo\ToDoApp\ToDoApp\bin1\System.Web.WebPages.Deployment.xml
 C:\Users\csaszariz\Source\Repos\webtodo\ToDoApp\ToDoApp\bin1\System.Web.WebPages.Razor.xml
+C:\Users\csaszariz\Source\Repos\webtodo\ToDoApp\ToDoApp\obj\Debug\ToDoApp.csprojResolveAssemblyReference.cache

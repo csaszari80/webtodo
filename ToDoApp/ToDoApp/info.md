@@ -7,13 +7,17 @@
   - ``` 
     A beírt szövegek feldolgozás nélküli megjelenítéséhez(pl ascii ábrák)
     ```
+  - kép bevitele: linkként kell bevinni a cím helyére a relatív útvonalat kell beírni
 
+- webes tervezéshez(képernyőképek) ajánlott mockflow.com (ingyenes regisztráció)
 - webes fejlesztés fogalma
   - ajánlott tanfolyamok: 
     - lenyűgöző weblapok készítése
     - asp.net core
     - étterem projekt
     - snake projekt
+    - MVC tervminta
+    - HTML és CSS, HTML alapozó
   - Minimum weblap testHTML.html
   - http protokoll (wikipédia) 
     - Négy eszköz: kérés, tartalom, fejléc, végállapot
@@ -38,5 +42,9 @@
 ### IIS
 - ha élesben akarjuk használni akkor kell egy szerver amin fut
 - fejlesztéshez a Visual Studio automatikusan telepíti a Visual Studio Express-t
+## Adatok szállítása a felhasználótól az alkalmazásig
+- Az adatokat a kérébe kell befoglalni
+- az adatbevitelhez űrlapot fogunk használni
 
-4.video 36 perc
+
+

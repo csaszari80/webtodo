@@ -24,7 +24,7 @@
             {
                 if (elem.Elvegezve)
                 {
-                    <li><strike>@elem.Megnevezes</strike></li>
+                    <li><del>@elem.Megnevezes</del></li>
                 }
                 else
                 {
@@ -32,6 +32,11 @@
                 }
             }
         </ul>
+        @*<form action="/" method="post">*@
+        <form>
+            <input type="text" name="Megnevezes" value="" />
+            <button>Felvitel</button>
+        </form>
     </div>
 </body>
 </html>

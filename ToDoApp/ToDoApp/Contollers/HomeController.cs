@@ -19,8 +19,12 @@ namespace ToDoApp.Contollers
             bevasarlolista.Add(new Feladat { Megnevezes = "Pirospaprika", Elvegezve = true });
             bevasarlolista.Add(new Feladat { Megnevezes = "Olaj", Elvegezve = false });
             bevasarlolista.Add(new Feladat { Megnevezes = "Marhahusika", Elvegezve = false });
-
+            if (Request.QueryString.AllKeys.Contains("Megnevezes"))
+            {
+                bevasarlolista.Add(new Feladat { Megnevezes = Request.QueryString["Megnevezes"], Elvegezve = false });
+            }
             
+
             //Az előállított adatokat (a modelt) átadjuk a nézetnek
             return View(bevasarlolista);
         }

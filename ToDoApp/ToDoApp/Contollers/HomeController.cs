@@ -28,5 +28,16 @@ namespace ToDoApp.Contollers
             //Az előállított adatokat (a modelt) átadjuk a nézetnek
             return View(bevasarlolista);
         }
+        
+        /// <summary>
+        /// Ez a függvény fogja kezelni az Add actiont a paraméterként megadott változókat automatikusan keresni fogja querystringben(get) és a form data-ban(post) is.
+        /// Ahhoz hogy ne dobjon fel hibát hozzá kell adni egy Add nevű viewt
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult Add(string megnevezes)
+        {
+            
+            return View();
+        }
     }
 }

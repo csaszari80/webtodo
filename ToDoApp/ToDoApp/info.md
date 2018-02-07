@@ -78,6 +78,7 @@ Ehhez az ASP.NET beépített szolgáltatásait használjuk
 
 ## Adatok perzisztens tárolása
 MS SQL Server Express-t telepítünk hozzá
+A Solution hoz telepíteni kell a EntityFrameWork Nuget package-t
 
 
 

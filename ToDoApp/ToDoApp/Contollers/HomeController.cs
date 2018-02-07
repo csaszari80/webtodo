@@ -66,5 +66,42 @@ namespace ToDoApp.Contollers
 
             return RedirectToAction("Index");
         }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        public ActionResult Modify()
+        {
+
+            // model létrehozása és kiküldése a felületre
+            var model = new Feladat();
+            return View(model);
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="Megnevezes"></param>
+        /// <returns></returns>
+        [HttpPost] 
+        public ActionResult Modify(Feladat feladat)
+        {
+            //todo: perzisztens adattárolás
+            //adatok validálása
+            if (!ModelState.IsValid)
+            {
+                //ha az adatok nincsenek rendben vissza kell küldeni őket módosításra
+                return View(feladat);
+            }
+
+            //Ha az adatok rendben vannak új elem felvitele
+            //bevasarlolista.Add(new Feladat { Megnevezes = "Marhahusika", Elvegezve = false });
+            db.Feladatok.Add(feladat);
+            db.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
     }
 }

@@ -19,13 +19,25 @@
             <input type="text" name="Megnevezes" value="" />
             <button>Felvitel</button>
         </form>*@
-
+        @*Ez a form felé kiírja az űrlap kitöltésével való problémákat*@
+        @Html.ValidationSummary()
         @using (Html.BeginForm())
         {
-            @Html.TextBoxFor(m => m.Megnevezes)
-            <button>Új elem felvitele</button>
+            <div>
+                @Html.LabelFor(m => m.Megnevezes)
+
+
+            </div>
+            <div>
+                @Html.TextBoxFor(m => m.Megnevezes)
+                @*Ez meg a mezővel való gondot írja ki*@
+                @Html.ValidationMessageFor(m=>m.Megnevezes)
+            </div>
+            <div>
+                <button>Új elem felvitele</button>
+                 @Html.ActionLink("Mégsem", "Index")
+            </div>
         }
-        @Html.ActionLink("Mégsem","Index")
     </div>
 </body>
 </html>

@@ -65,9 +65,19 @@
 Az általános adatbeviteli megoldás ASP.NET MVC alkalmazásoknál: Két Action és hozáájuk 1 db view
 - Az adatbevitelhez szükséges képernyőt egy Action szolgáltatja ami a get kérésekre reagál
 - Az adat feldolgozást egy ugyanolyan nevű de csak post kérésekre reagáló action kezeli
+## Adatok validálása
+Követeljük meg, hogy a feladat megnevezése ne lehessen üres
+Ehhez az ASP.NET beépített szolgáltatásait használjuk
+- Az adatmodelben annotációval tudjuk a feltételeket megadni microsoft oldalán van hozzá [doksi](https://docs.microsoft.com/en-us/aspnet/mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-6)
+- Az adatmodellben property-t kell használni
+- így a model köré tudjuk építeni a nézetünket(pl: @Html.TextBoxFor(m => m.Megnevezes), @Html.LabelFor(m => m.Megnevezes))
+- a modellt ár rudjuk venni a POSt-ra váró Action paraméterlistájában
+- a modell állapotát ellenőrizni tudjuk az Action-ben (ModelState.IsValid)
+- ha nem jók az adatok akkor vissza tudjuk küldeni a felhasználónak egy return view(model) sorral
+- A validációs üzeneteket ki tudjuk íratni (pl:  @Html.ValidationSummary() , @Html.ValidationMessageFor(m=>m.Megnevezes))
+
 ## Adatok perzisztens tárolása
+MS SQL Server Express-t telepítünk hozzá
 
 
 
-
-3.alkalom 2. video befejezve

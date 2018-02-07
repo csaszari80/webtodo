@@ -35,8 +35,7 @@ namespace ToDoApp.Contollers
         [HttpGet] //így most már csak get kérésre reagál (annotáltuk)
         public ActionResult Add()
         {
-            //todo: perzisztens adattárolás
-
+           
             // model létrehozása és kiküldése a felületre
             var model = new Feladat();
             return View(model);
@@ -50,11 +49,17 @@ namespace ToDoApp.Contollers
         /// <param name="Megnevezes"></param>
         /// <returns></returns>
         [HttpPost] // ez csak post kérésekre reagál
-        public ActionResult Add(string megnevezes)
+        public ActionResult Add(Feladat feladat)
         {
             //todo: perzisztens adattárolás
-
-            // új elem felvitele
+            //adatok validálása
+            if (!ModelState.IsValid)  
+            {
+                //ha az adatok nincsenek rendben vissza kell küldeni őket módosításra
+                return View(feladat);
+            }
+            
+            //Ha az adatok rendben vannak új elem felvitele
             
             return RedirectToAction("Index");
         }

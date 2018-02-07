@@ -5,6 +5,9 @@ namespace ToDoApp.Contollers
 {
     public class Feladat
     {
+        //kulcsmező nélkül nem lehet az adatbázisba adatokat feltölteni az Id-t automatikusan felismeri
+        public int Id { get; set; }
+
         [Required] //Ez az annotáció megmondja, hogy a következő tulajdonság(property) kötelező
         [MinLength(3)] //Ez a hosszát vizsgálja minimum 3
         //[MaxLength(5)] //eZ is maximum 5

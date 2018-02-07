@@ -155,3 +155,7 @@ E:\netacademia\csharp\webtodo\ToDoApp\ToDoApp\bin\System.Web.WebPages.Razor.xml
 E:\netacademia\csharp\webtodo\ToDoApp\ToDoApp\obj\Debug\ToDoApp.csprojResolveAssemblyReference.cache
 E:\netacademia\csharp\webtodo\ToDoApp\ToDoApp\obj\Debug\ToDoApp.dll
 E:\netacademia\csharp\webtodo\ToDoApp\ToDoApp\obj\Debug\ToDoApp.pdb
+E:\netacademia\csharp\webtodo\ToDoApp\ToDoApp\bin\EntityFramework.dll
+E:\netacademia\csharp\webtodo\ToDoApp\ToDoApp\bin\EntityFramework.SqlServer.dll
+E:\netacademia\csharp\webtodo\ToDoApp\ToDoApp\bin\EntityFramework.xml
+E:\netacademia\csharp\webtodo\ToDoApp\ToDoApp\bin\EntityFramework.SqlServer.xml

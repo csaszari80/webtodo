@@ -17,7 +17,7 @@ namespace ToDoApp.Contollers
         //A teljes cím: http://locsalhost:port/Home/index ebbőlaz Home az HomeControllert jelenti a index pedig ezt a függvényt hívja ami megjeleníti a viewt ha nincs máés függvény akkor a standard szerint ez lesz meghívva
         public ActionResult Index()
         {
-            var bevasarlolista = new List<Feladat>();
+            var bevasarlolista = db.Feladatok.ToList();
             
            
             
@@ -61,6 +61,9 @@ namespace ToDoApp.Contollers
 
             //Ha az adatok rendben vannak új elem felvitele
             //bevasarlolista.Add(new Feladat { Megnevezes = "Marhahusika", Elvegezve = false });
+            db.Feladatok.Add(feladat);
+            db.SaveChanges();
+
             return RedirectToAction("Index");
         }
     }

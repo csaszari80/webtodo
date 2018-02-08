@@ -146,6 +146,12 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Add.cshtml" />
     <Content Include="Views\Home\Edit.cshtml" />
+    <Content Include="Views\Home\Delete.cshtml" />
+    <Content Include="Views\Todo\Create.cshtml" />
+    <Content Include="Views\Todo\Delete.cshtml" />
+    <Content Include="Views\Todo\Details.cshtml" />
+    <Content Include="Views\Todo\Edit.cshtml" />
+    <Content Include="Views\Todo\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -165,6 +171,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Contollers\Feladat.cs" />
     <Compile Include="Contollers\HomeController.cs" />
+    <Compile Include="Contollers\TodoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

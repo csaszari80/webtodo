@@ -21,6 +21,7 @@
     - HTML és CSS, HTML alapozó
     - C# alapok
     - C# nagyoknak
+    - Bootstrap tanfolyam
   - Minimum weblap testHTML.html
   - http protokoll (wikipédia) 
     - Négy eszköz: kérés, tartalom, fejléc, végállapot

@@ -107,5 +107,38 @@ namespace ToDoApp.Contollers
 
             return RedirectToAction("Index");
         }
+
+        /// <summary>
+        /// 
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public ActionResult Delete(int id)
+        {
+
+            // model előkeresése az adatbázisból id alapján
+            var model = db.Feladatok.Find(id);
+            return View(model);
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="Megnevezes"></param>
+        /// <returns></returns>
+        [HttpPost]
+        public ActionResult Delete(Feladat feladat)
+        {
+
+            ///a rejtett mezőben érkező ID (@Html.HiddenFor) alapján megkeressük az adatbázisban a rekordot 
+            ///( a db-ből a teljes rekordot lekéri így az itt először bevezettett model változónak meglesz minden property-je)
+            var model = db.Feladatok.Find(feladat.Id);
+            // töröljük a rekordot
+            db.Feladatok.Remove(model);
+            db.SaveChanges();
+
+
+            return RedirectToAction("Index");
+        }
     }
 }

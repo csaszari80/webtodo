@@ -24,11 +24,11 @@
             {
                 if (elem.Elvegezve)
                 {
-                    <li><del>@elem.Megnevezes</del></li>
+                    <li><del>@elem.Megnevezes</del> @Html.ActionLink("Módosítás", "Edit", new { id = elem.Id})</li>
                 }
                 else
                 {
-                    <li>@elem.Megnevezes</li>
+                    <li>@elem.Id @elem.Megnevezes @Html.ActionLink("Módosítás", "Edit", new { id = elem.Id })</li>
                 }
             }
         </ul>
@@ -41,7 +41,6 @@
         @*Mivel az Index (az ehhez a view-hoz tartozó) action és a hívni kívánt Add action ugyanabban a Contorolleren (Home) van ezért annak megadása nem szükséges
         @Html.ActionLink("Új elem felvitele","Add","Home")*@
         @Html.ActionLink("Új elem felvitele", "Add")
-        @Html.ActionLink("Elem módosítása", "Modify")
         </div>
     </body>
     </html>

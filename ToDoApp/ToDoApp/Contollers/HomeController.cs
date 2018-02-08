@@ -17,6 +17,7 @@ namespace ToDoApp.Contollers
         //A teljes cím: http://locsalhost:port/Home/index ebbőlaz Home az HomeControllert jelenti a index pedig ezt a függvényt hívja ami megjeleníti a viewt ha nincs máés függvény akkor a standard szerint ez lesz meghívva
         public ActionResult Index()
         {
+            //todo: az Id-t ki kell tenni valamilyen formában az index oldalra
             var bevasarlolista = db.Feladatok.ToList();
             
            
@@ -51,7 +52,7 @@ namespace ToDoApp.Contollers
         [HttpPost] // ez csak post kérésekre reagál
         public ActionResult Add(Feladat feladat)
         {
-            //todo: perzisztens adattárolás
+           
             //adatok validálása
             if (!ModelState.IsValid)  
             {
@@ -62,6 +63,7 @@ namespace ToDoApp.Contollers
             //Ha az adatok rendben vannak új elem felvitele
             //bevasarlolista.Add(new Feladat { Megnevezes = "Marhahusika", Elvegezve = false });
             db.Feladatok.Add(feladat);
+            //adatokmentése
             db.SaveChanges();
 
             return RedirectToAction("Index");
@@ -73,11 +75,11 @@ namespace ToDoApp.Contollers
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        public ActionResult Modify()
+        public ActionResult Edit(int id)
         {
 
-            // model létrehozása és kiküldése a felületre
-            var model = new Feladat();
+            // model előkeresése az adatbázisból id alapján
+            var model = db.Feladatok.Find(id);
             return View(model);
         }
         /// <summary>
@@ -86,20 +88,22 @@ namespace ToDoApp.Contollers
         /// <param name="Megnevezes"></param>
         /// <returns></returns>
         [HttpPost] 
-        public ActionResult Modify(Feladat feladat)
+        public ActionResult Edit(Feladat feladat)
         {
-            //todo: perzisztens adattárolás
+            
             //adatok validálása
             if (!ModelState.IsValid)
             {
                 //ha az adatok nincsenek rendben vissza kell küldeni őket módosításra
                 return View(feladat);
             }
-
-            //Ha az adatok rendben vannak új elem felvitele
-            //bevasarlolista.Add(new Feladat { Megnevezes = "Marhahusika", Elvegezve = false });
-            db.Feladatok.Add(feladat);
+            ///a rejtett mezőben érkező ID (@Html.HiddenFor) alapján megkeressük az adatbázisban a rekordot 
+            ///( a db-ből a teljes rekordot lekéri így az itt először bevezettett model változónak meglesz minden property-je)
+            var model = db.Feladatok.Find(feladat.Id);
+            // az adatbázisból még a régi megnevezés jön át ezt felül kell írni az űrlapról az Action paramétereként érkező adattal
+            model.Megnevezes = feladat.Megnevezes;
             db.SaveChanges();
+           
 
             return RedirectToAction("Index");
         }

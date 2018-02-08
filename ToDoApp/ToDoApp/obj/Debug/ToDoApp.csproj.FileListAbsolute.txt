@@ -159,3 +159,7 @@ E:\netacademia\csharp\webtodo\ToDoApp\ToDoApp\bin\EntityFramework.dll
 E:\netacademia\csharp\webtodo\ToDoApp\ToDoApp\bin\EntityFramework.SqlServer.dll
 E:\netacademia\csharp\webtodo\ToDoApp\ToDoApp\bin\EntityFramework.xml
 E:\netacademia\csharp\webtodo\ToDoApp\ToDoApp\bin\EntityFramework.SqlServer.xml
+C:\Users\csaszariz\Source\Repos\webtodo\ToDoApp\ToDoApp\bin\EntityFramework.dll
+C:\Users\csaszariz\Source\Repos\webtodo\ToDoApp\ToDoApp\bin\EntityFramework.SqlServer.dll
+C:\Users\csaszariz\Source\Repos\webtodo\ToDoApp\ToDoApp\bin\EntityFramework.xml
+C:\Users\csaszariz\Source\Repos\webtodo\ToDoApp\ToDoApp\bin\EntityFramework.SqlServer.xml

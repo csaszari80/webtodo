@@ -19,6 +19,8 @@
     - snake projekt
     - MVC tervminta
     - HTML és CSS, HTML alapozó
+    - C# alapok
+    - C# nagyoknak
   - Minimum weblap testHTML.html
   - http protokoll (wikipédia) 
     - Négy eszköz: kérés, tartalom, fejléc, végállapot
@@ -79,6 +81,20 @@ Ehhez az ASP.NET beépített szolgáltatásait használjuk
 ## Adatok perzisztens tárolása
 MS SQL Server Express-t telepítünk hozzá
 A Solution hoz telepíteni kell a EntityFrameWork Nuget package-t
+### Adatbáziskezelés EntityFramework Code First segítségével
+  #### Megközelítések
+- Data First
+- Model First
+- Code First
+
+Ha nem adunk meg neki semilyen egyéb paramétert akkor a helyi gépen fogja létrehozni a context osztály teljes(névtérrel kiegészített nevével)
+- vagy a "default instance-on"
+- vagy a sqlexpress nevű szerveren
+- vagy localdb-ként
+
+## Hibaelhárítás
+Amennyiben gép újratelepítés után nem indul el a webalkalmazás (pontosabban az iis express nem indul el) akkor a projekt .sln fájlját tartalmazó mappában lévő rejtett vs mappában lévő config mappában (solutionmappa\.vs\config) **applicationhost.config** fájlt kell törölni majd újraindítani a visual studiót
+
 
 
 

@@ -4,35 +4,35 @@
     Ezután lesz egy List<string> típusú Model nevű változőnk
     *@
 @model List<ToDoApp.Contollers.Feladat>
-@{
-    Layout = null;
-
+@{ 
+    ViewBag.Title = "Feladatlista";
 }
-
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-</head>
-<body>
-    <div> 
-        <ul>
-            @*Lista bejárása foreach ciklussal  Ha a modelt használjul*@
-            @foreach (var elem in Model)
+    @*A reszponzív oldalakhoz a grid szerkezetet a row és a bele ágyazott col osztályú diveket kell használni a col szélességét a col-méret-szélesség adja meg 
+    amiből a méret azt adja meg hogy mekkora kijelzőről van szó (pl: lg-> large)
+    a szélesség pedig azt jeleniti, hogy a képernyő szélességének hány 12-ed részét foglalja el az oszlop
+    ilyenből többet is meg lehet adni és akkor különböző méretű kijelzőkön másként fog viselkedni*@
+    
+    <div class="row">
+        <div class="col col-lg-3">
+            Ez egy oszlop
+        </div>
+        <div class="col col-lg-7">
+            <ul class="list-group">
+                @*Lista bejárása foreach ciklussal  Ha a modelt használjul*@
+                @foreach (var elem in Model)
+        {
+            if (elem.Elvegezve)
             {
-                if (elem.Elvegezve)
-                {
-                    <li><del>@elem.Megnevezes</del> @Html.ActionLink("Módosítás", "Edit", new { id = elem.Id}) @Html.ActionLink("Törlés", "Delete", new { id = elem.Id })</li>
+                        <li class="list-group-item"><del>@elem.Megnevezes</del> @Html.ActionLink("Módosítás", "Edit", new { id = elem.Id }) @Html.ActionLink("Törlés", "Delete", new { id = elem.Id })</li>
+                    }
+                    else
+                    {
+                        //A link összeállítása a routeconfigban szereplő url template alapján történik
+                        <li class="list-group-item">@elem.Id @elem.Megnevezes @Html.ActionLink("Módosítás", "Edit", new { id = elem.Id }) @Html.ActionLink("Törlés", "Delete", new { id = elem.Id })</li>
+                    }
                 }
-                else
-                {
-                    //A link összeállítása a routeconfigban szereplő url template alapján történik
-                    <li>@elem.Id @elem.Megnevezes @Html.ActionLink("Módosítás", "Edit", new { id = elem.Id }) @Html.ActionLink("Törlés", "Delete", new { id = elem.Id })</li>
-                }
-            }
-        </ul>
+            </ul>
+        </div> 
         @*A razor kódban a html és az url helper teszi lehetővé, hogy ne tiszta html kódot kelljen írnunk, hanem a kapott model köré tudjuk szervezni a cshtml kódot*@
         @*Html-ben a hivatkozás így nézne ki
         <a href="http://google.com">Ez egy link</a>*@
@@ -40,8 +40,9 @@
         @*A külső hivatkozásokhoz ez is jó azonban ha az alkalmazás egyik action-jét  akarjuk meghívni,
              akkor nem érdemes  megkerülni az útválasztást ezért Razorban a helper-t használjuk inkább*@
         @*Mivel az Index (az ehhez a view-hoz tartozó) action és a hívni kívánt Add action ugyanabban a Contorolleren (Home) van ezért annak megadása nem szükséges
-        @Html.ActionLink("Új elem felvitele","Add","Home")*@
-        @Html.ActionLink("Új elem felvitele", "Add")
-        </div>
-    </body>
-    </html>
+        @Html.ActionLink("Új elem felvitele","Add","Home")
+            
+            Ennek így most CSS-osztályt is adunk
+            *@
+        <div class="col col-lg-2 col">@Html.ActionLink("Új elem felvitele", "Add", null, new { @class = "btn btn-warning" })</div>
+    </div>

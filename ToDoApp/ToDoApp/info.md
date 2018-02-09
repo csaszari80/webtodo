@@ -93,6 +93,14 @@ Ha nem adunk meg neki semilyen egyéb paramétert akkor a helyi gépen fogja lé
 - vagy a sqlexpress nevű szerveren
 - vagy localdb-ként
 
+## Nézetek generálása layout-al
+- előszőr lefut a _ViewStart.cshtml ami beállítja az alapértelmezett layoutot (_Layout.cshtml)
+- akárhány layout-ot használhatunk a nézet elején beállíthatjuk, vagy letilthatjuk Layout=Null
+- a nézetben generált html kód a layoutban lévő @RenderBody() helyen fog megjelenni
+
+### [Bootstrap](http://getbootstrap.com)
+
+
 ## Hibaelhárítás
 Amennyiben gép újratelepítés után nem indul el a webalkalmazás (pontosabban az iis express nem indul el) akkor a projekt .sln fájlját tartalmazó mappában lévő rejtett vs mappában lévő config mappában (solutionmappa\.vs\config) **applicationhost.config** fájlt kell törölni majd újraindítani a visual studiót
 
